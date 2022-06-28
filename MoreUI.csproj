@@ -41,16 +41,12 @@
   </ItemGroup>
 
   <!-- Deployment instructions by Zeprus#0001 on discord. -->
-  <PropertyGroup Label="Variables">
-    <!-- SET BELOW TO GAME BASE DIRECTORY-->
-    <GameDir>C:\Program Files (x86)\Steam\steamapps\common\20MinuteTillDawn</GameDir>
-    <BepInExDir>$(GameDir)\BepInEx</BepInExDir>
-  </PropertyGroup>
-
   <!--Automatic deploy-->
   <Target Name="Deploy" AfterTargets="Build">
+    <!-- Copy the result to outside this folder. -->
     <Copy
-      SourceFiles="@(MainAssembly)" DestinationFolder="$(BepInExDir)\plugins\Callmore.MoreUI"
+      SourceFiles="@(MainAssembly)"
+      DestinationFolder="../plugins/Callmore.MoreUI"
     />
   </Target>
 </Project>
