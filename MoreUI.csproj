@@ -46,7 +46,11 @@
     <!-- Copy the result to outside this folder. -->
     <Copy
       SourceFiles="@(MainAssembly)"
-      DestinationFolder="../plugins/Callmore.MoreUI"
+      DestinationFolder="../plugins/$(AssemblyName)"
+    />
+    <Copy
+      SourceFiles="@(MainAssembly)"
+      DestinationFolder="./out"
     />
   </Target>
 </Project>

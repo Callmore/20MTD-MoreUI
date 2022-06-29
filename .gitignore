@@ -400,3 +400,7 @@ FodyWeavers.xsd
 # Custom
 bin/
 lib/*.dll
+out/*.dll
+
+# Exported package
+MoreUI.zip
